@@ -1,0 +1,2789 @@
+# Write the type definition here!
+module Numo
+  class NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.array_shape: (untyped) -> untyped
+
+    def self.array_type: (untyped) -> untyped
+
+    def self.asarray: (untyped a) -> untyped
+
+    def self.byte_size: () -> untyped
+
+    def self.cast: (untyped a) -> untyped
+
+    def self.column_stack: (untyped arrays) -> untyped
+
+    def self.concatenate: (untyped arrays, ?axis: untyped) -> untyped
+
+    def self.debug=: (untyped) -> untyped
+
+    def self.diag_indices: (untyped m, untyped n, ?untyped k) -> untyped
+
+    def self.dstack: (untyped arrays) -> untyped
+
+    def self.eye: (*untyped) -> untyped
+
+    def self.from_binary: (*untyped) -> untyped
+
+    alias self.from_string self.from_binary
+
+    def self.hstack: (untyped arrays) -> untyped
+
+    def self.inspect_cols: () -> untyped
+
+    def self.inspect_cols=: (untyped) -> untyped
+
+    def self.inspect_rows: () -> untyped
+
+    def self.inspect_rows=: (untyped) -> untyped
+
+    def self.linspace: (*untyped) -> untyped
+
+    def self.logspace: (*untyped) -> untyped
+
+    def self.new_like: (untyped) -> untyped
+
+    def self.ones: (*untyped) -> untyped
+
+    def self.parse: (untyped str, ?split1d: untyped, ?split2d: untyped, ?split3d: untyped) -> untyped
+
+    def self.profile: () -> untyped
+
+    def self.profile=: (untyped) -> untyped
+
+    def self.srand: (*untyped) -> untyped
+
+    def self.tril_indices: (untyped m, untyped n, ?untyped k) -> untyped
+
+    def self.triu_indices: (untyped m, untyped n, ?untyped k) -> untyped
+
+    def self.upcast: (untyped) -> untyped
+
+    def self.vstack: (untyped arrays) -> untyped
+
+    def self.zeros: (*untyped) -> untyped
+
+    public
+
+    def ==: (untyped) -> untyped
+
+    def []: () -> untyped
+
+    def []=: () -> untyped
+
+    def append: (untyped other, ?axis: untyped) -> untyped
+
+    def at: (*untyped) -> untyped
+
+    def byte_size: () -> untyped
+
+    def byte_swapped?: () -> untyped
+
+    def cast_to: (untyped) -> untyped
+
+    def coerce: (untyped) -> untyped
+
+    def column_major?: () -> untyped
+
+    def concatenate: (*untyped arrays, ?axis: untyped) -> untyped
+
+    def contiguous?: () -> untyped
+
+    def copy: () -> untyped
+
+    def cov: (?untyped y, ?ddof: untyped, ?fweights: untyped, ?aweights: untyped) -> untyped
+
+    def debug_info: () -> untyped
+
+    def deg2rad: () -> untyped
+
+    def delete: (untyped indice, ?untyped axis) -> untyped
+
+    def diag: (?untyped k) -> untyped
+
+    def diag_indices: (?untyped k) -> untyped
+
+    def diagonal: (*untyped) -> untyped
+
+    def diff: (?untyped n, ?axis: untyped) -> untyped
+
+    def dot: (untyped b) -> untyped
+
+    def dsplit: (untyped indices_or_sections) -> untyped
+
+    def each_over_axis: (?untyped axis) -> untyped
+
+    def empty?: () -> untyped
+
+    def expand_dims: (untyped) -> untyped
+
+    def flatten: () -> untyped
+
+    def fliplr: () -> untyped
+
+    def flipud: () -> untyped
+
+    def fortran_contiguous?: () -> untyped
+
+    def free: () -> untyped
+
+    def host_order?: () -> untyped
+
+    def hsplit: (untyped indices_or_sections) -> untyped
+
+    alias hton swap_byte
+
+    def inner: (untyped b, ?axis: untyped) -> untyped
+
+    def inplace: () -> untyped
+
+    def inplace!: () -> untyped
+
+    def inplace?: () -> untyped
+
+    def insert: (untyped indice, untyped values, ?axis: untyped) -> untyped
+
+    def kron: (untyped b) -> untyped
+
+    alias length size
+
+    alias little_endian? host_order?
+
+    def marshal_dump: () -> untyped
+
+    def marshal_load: (untyped) -> untyped
+
+    def ndim: () -> untyped
+
+    alias network_order? byte_swapped?
+
+    def new_fill: (untyped value) -> untyped
+
+    def new_narray: () -> untyped
+
+    def new_ones: () -> untyped
+
+    def new_zeros: () -> untyped
+
+    alias not_inplace! out_of_place!
+
+    def out_of_place!: () -> untyped
+
+    def outer: (untyped b, ?axis: untyped) -> untyped
+
+    def percentile: (untyped q, ?axis: untyped) -> untyped
+
+    def rad2deg: () -> untyped
+
+    alias rank ndim
+
+    def repeat: (untyped arg, ?axis: untyped) -> untyped
+
+    def reshape: (*untyped) -> untyped
+
+    def reshape!: (*untyped) -> untyped
+
+    def reverse: (*untyped) -> untyped
+
+    def rot90: (?untyped k, ?untyped axes) -> untyped
+
+    def row_major?: () -> untyped
+
+    def shape: () -> untyped
+
+    def size: () -> untyped
+
+    def slice: (*untyped) -> untyped
+
+    def split: (untyped indices_or_sections, ?axis: untyped) -> untyped
+
+    def store_binary: (*untyped) -> untyped
+
+    def swap_byte: () -> untyped
+
+    def swapaxes: (untyped, untyped) -> untyped
+
+    def tile: (*untyped arg) -> untyped
+
+    def to_binary: () -> untyped
+
+    def to_c: () -> untyped
+
+    def to_f: () -> untyped
+
+    def to_host: () -> untyped
+
+    def to_i: () -> untyped
+
+    def to_network: () -> untyped
+
+    alias to_string to_binary
+
+    def to_swapped: () -> untyped
+
+    def to_vacs: () -> untyped
+
+    alias total size
+
+    def trace: (?untyped offset, ?untyped axis, ?nan: untyped) -> untyped
+
+    def transpose: (*untyped) -> untyped
+
+    def tril: (?untyped k) -> untyped
+
+    def tril!: (?untyped k) -> untyped
+
+    def tril_indices: (?untyped k) -> untyped
+
+    def triu: (?untyped k) -> untyped
+
+    def triu!: (?untyped k) -> untyped
+
+    def triu_indices: (?untyped k) -> untyped
+
+    alias vacs_order? host_order?
+
+    def view: () -> untyped
+
+    def vsplit: (untyped indices_or_sections) -> untyped
+
+    private
+
+    def check_axis: (untyped axis) -> untyped
+
+    def initialize: (*untyped) -> void
+
+    def initialize_copy: (untyped) -> untyped
+
+    VERSION: String
+  end
+
+  class Bit < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    public
+
+    def &: (untyped) -> untyped
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def ^: (untyped) -> untyped
+
+    def all?: (*untyped) -> untyped
+
+    def allocate: () -> untyped
+
+    def any?: (*untyped) -> untyped
+
+    def coerce_cast: (untyped) -> untyped
+
+    def copy: () -> untyped
+
+    alias count count_true
+
+    alias count_0 count_false
+
+    alias count_1 count_true
+
+    def count_false: (*untyped) -> untyped
+
+    def count_true: (*untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def fill: (untyped) -> untyped
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def inspect: () -> untyped
+
+    def mask: (untyped) -> untyped
+
+    def none?: (*untyped) -> untyped
+
+    def store: (untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    def where: () -> untyped
+
+    def where2: () -> untyped
+
+    def |: (untyped) -> untyped
+
+    def ~: () -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Float
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class UInt8 < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    def self.maximum: (*untyped) -> untyped
+
+    def self.minimum: (*untyped) -> untyped
+
+    public
+
+    def %: (untyped) -> untyped
+
+    def &: (untyped) -> untyped
+
+    def *: (untyped) -> untyped
+
+    def **: (untyped) -> untyped
+
+    def +: (untyped) -> untyped
+
+    def -: (untyped) -> untyped
+
+    def -@: () -> untyped
+
+    def /: (untyped) -> untyped
+
+    alias < lt
+
+    def <<: (untyped) -> untyped
+
+    alias <= le
+
+    alias > gt
+
+    alias >= ge
+
+    def >>: (untyped) -> untyped
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def ^: (untyped) -> untyped
+
+    def abs: () -> untyped
+
+    def allocate: () -> untyped
+
+    def argmax: (*untyped) -> untyped
+
+    def argmin: (*untyped) -> untyped
+
+    def bincount: (*untyped) -> untyped
+
+    alias ceil view
+
+    def clip: (untyped, untyped) -> untyped
+
+    alias close_to eq
+
+    def coerce_cast: (untyped) -> untyped
+
+    alias conj view
+
+    alias conjugate view
+
+    def cumprod: (*untyped) -> untyped
+
+    def cumsum: (*untyped) -> untyped
+
+    def divmod: (untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def eye: (*untyped) -> untyped
+
+    def fill: (untyped) -> untyped
+
+    alias floor view
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def ge: (untyped) -> untyped
+
+    def gt: (untyped) -> untyped
+
+    alias im view
+
+    alias indgen seq
+
+    def inspect: () -> untyped
+
+    def le: (untyped) -> untyped
+
+    def lt: (untyped) -> untyped
+
+    def map: () -> untyped
+
+    def map_with_index: () -> untyped
+
+    def max: (*untyped) -> untyped
+
+    def max_index: (*untyped) -> untyped
+
+    def median: (*untyped) -> untyped
+
+    def min: (*untyped) -> untyped
+
+    def min_index: (*untyped) -> untyped
+
+    def minmax: (*untyped) -> untyped
+
+    def mulsum: (*untyped) -> untyped
+
+    def ne: (untyped) -> untyped
+
+    alias nearly_eq eq
+
+    def poly: (*untyped) -> untyped
+
+    alias pow **
+
+    def prod: (*untyped) -> untyped
+
+    def ptp: (*untyped) -> untyped
+
+    def rand: (*untyped) -> untyped
+
+    def reciprocal: () -> untyped
+
+    alias rint view
+
+    alias round view
+
+    def seq: (*untyped) -> untyped
+
+    def sign: () -> untyped
+
+    def sort: (*untyped) -> untyped
+
+    def sort_index: (*untyped) -> untyped
+
+    def square: () -> untyped
+
+    def store: (untyped) -> untyped
+
+    def sum: (*untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    alias trunc view
+
+    def |: (untyped) -> untyped
+
+    def ~: () -> untyped
+
+    private
+
+    def maximum: (*untyped) -> untyped
+
+    def minimum: (*untyped) -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Integer
+
+    MAX: Integer
+
+    MIN: Integer
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class UInt16 < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    def self.maximum: (*untyped) -> untyped
+
+    def self.minimum: (*untyped) -> untyped
+
+    public
+
+    def %: (untyped) -> untyped
+
+    def &: (untyped) -> untyped
+
+    def *: (untyped) -> untyped
+
+    def **: (untyped) -> untyped
+
+    def +: (untyped) -> untyped
+
+    def -: (untyped) -> untyped
+
+    def -@: () -> untyped
+
+    def /: (untyped) -> untyped
+
+    alias < lt
+
+    def <<: (untyped) -> untyped
+
+    alias <= le
+
+    alias > gt
+
+    alias >= ge
+
+    def >>: (untyped) -> untyped
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def ^: (untyped) -> untyped
+
+    def abs: () -> untyped
+
+    def allocate: () -> untyped
+
+    def argmax: (*untyped) -> untyped
+
+    def argmin: (*untyped) -> untyped
+
+    def bincount: (*untyped) -> untyped
+
+    alias ceil view
+
+    def clip: (untyped, untyped) -> untyped
+
+    alias close_to eq
+
+    def coerce_cast: (untyped) -> untyped
+
+    alias conj view
+
+    alias conjugate view
+
+    def cumprod: (*untyped) -> untyped
+
+    def cumsum: (*untyped) -> untyped
+
+    def divmod: (untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def eye: (*untyped) -> untyped
+
+    def fill: (untyped) -> untyped
+
+    alias floor view
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def ge: (untyped) -> untyped
+
+    def gt: (untyped) -> untyped
+
+    alias im view
+
+    alias indgen seq
+
+    def inspect: () -> untyped
+
+    def le: (untyped) -> untyped
+
+    def lt: (untyped) -> untyped
+
+    def map: () -> untyped
+
+    def map_with_index: () -> untyped
+
+    def max: (*untyped) -> untyped
+
+    def max_index: (*untyped) -> untyped
+
+    def median: (*untyped) -> untyped
+
+    def min: (*untyped) -> untyped
+
+    def min_index: (*untyped) -> untyped
+
+    def minmax: (*untyped) -> untyped
+
+    def mulsum: (*untyped) -> untyped
+
+    def ne: (untyped) -> untyped
+
+    alias nearly_eq eq
+
+    def poly: (*untyped) -> untyped
+
+    alias pow **
+
+    def prod: (*untyped) -> untyped
+
+    def ptp: (*untyped) -> untyped
+
+    def rand: (*untyped) -> untyped
+
+    def reciprocal: () -> untyped
+
+    alias rint view
+
+    alias round view
+
+    def seq: (*untyped) -> untyped
+
+    def sign: () -> untyped
+
+    def sort: (*untyped) -> untyped
+
+    def sort_index: (*untyped) -> untyped
+
+    def square: () -> untyped
+
+    def store: (untyped) -> untyped
+
+    def sum: (*untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    alias trunc view
+
+    def |: (untyped) -> untyped
+
+    def ~: () -> untyped
+
+    private
+
+    def maximum: (*untyped) -> untyped
+
+    def minimum: (*untyped) -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Integer
+
+    MAX: Integer
+
+    MIN: Integer
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class UInt32 < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    def self.maximum: (*untyped) -> untyped
+
+    def self.minimum: (*untyped) -> untyped
+
+    public
+
+    def %: (untyped) -> untyped
+
+    def &: (untyped) -> untyped
+
+    def *: (untyped) -> untyped
+
+    def **: (untyped) -> untyped
+
+    def +: (untyped) -> untyped
+
+    def -: (untyped) -> untyped
+
+    def -@: () -> untyped
+
+    def /: (untyped) -> untyped
+
+    alias < lt
+
+    def <<: (untyped) -> untyped
+
+    alias <= le
+
+    alias > gt
+
+    alias >= ge
+
+    def >>: (untyped) -> untyped
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def ^: (untyped) -> untyped
+
+    def abs: () -> untyped
+
+    def allocate: () -> untyped
+
+    def argmax: (*untyped) -> untyped
+
+    def argmin: (*untyped) -> untyped
+
+    def bincount: (*untyped) -> untyped
+
+    alias ceil view
+
+    def clip: (untyped, untyped) -> untyped
+
+    alias close_to eq
+
+    def coerce_cast: (untyped) -> untyped
+
+    alias conj view
+
+    alias conjugate view
+
+    def cumprod: (*untyped) -> untyped
+
+    def cumsum: (*untyped) -> untyped
+
+    def divmod: (untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def eye: (*untyped) -> untyped
+
+    def fill: (untyped) -> untyped
+
+    alias floor view
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def ge: (untyped) -> untyped
+
+    def gt: (untyped) -> untyped
+
+    alias im view
+
+    alias indgen seq
+
+    def inspect: () -> untyped
+
+    def le: (untyped) -> untyped
+
+    def lt: (untyped) -> untyped
+
+    def map: () -> untyped
+
+    def map_with_index: () -> untyped
+
+    def max: (*untyped) -> untyped
+
+    def max_index: (*untyped) -> untyped
+
+    def median: (*untyped) -> untyped
+
+    def min: (*untyped) -> untyped
+
+    def min_index: (*untyped) -> untyped
+
+    def minmax: (*untyped) -> untyped
+
+    def mulsum: (*untyped) -> untyped
+
+    def ne: (untyped) -> untyped
+
+    alias nearly_eq eq
+
+    def poly: (*untyped) -> untyped
+
+    alias pow **
+
+    def prod: (*untyped) -> untyped
+
+    def ptp: (*untyped) -> untyped
+
+    def rand: (*untyped) -> untyped
+
+    def reciprocal: () -> untyped
+
+    alias rint view
+
+    alias round view
+
+    def seq: (*untyped) -> untyped
+
+    def sign: () -> untyped
+
+    def sort: (*untyped) -> untyped
+
+    def sort_index: (*untyped) -> untyped
+
+    def square: () -> untyped
+
+    def store: (untyped) -> untyped
+
+    def sum: (*untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    alias trunc view
+
+    def |: (untyped) -> untyped
+
+    def ~: () -> untyped
+
+    private
+
+    def maximum: (*untyped) -> untyped
+
+    def minimum: (*untyped) -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Integer
+
+    MAX: Integer
+
+    MIN: Integer
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class UInt64 < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    def self.maximum: (*untyped) -> untyped
+
+    def self.minimum: (*untyped) -> untyped
+
+    public
+
+    def %: (untyped) -> untyped
+
+    def &: (untyped) -> untyped
+
+    def *: (untyped) -> untyped
+
+    def **: (untyped) -> untyped
+
+    def +: (untyped) -> untyped
+
+    def -: (untyped) -> untyped
+
+    def -@: () -> untyped
+
+    def /: (untyped) -> untyped
+
+    alias < lt
+
+    def <<: (untyped) -> untyped
+
+    alias <= le
+
+    alias > gt
+
+    alias >= ge
+
+    def >>: (untyped) -> untyped
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def ^: (untyped) -> untyped
+
+    def abs: () -> untyped
+
+    def allocate: () -> untyped
+
+    def argmax: (*untyped) -> untyped
+
+    def argmin: (*untyped) -> untyped
+
+    def bincount: (*untyped) -> untyped
+
+    alias ceil view
+
+    def clip: (untyped, untyped) -> untyped
+
+    alias close_to eq
+
+    def coerce_cast: (untyped) -> untyped
+
+    alias conj view
+
+    alias conjugate view
+
+    def cumprod: (*untyped) -> untyped
+
+    def cumsum: (*untyped) -> untyped
+
+    def divmod: (untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def eye: (*untyped) -> untyped
+
+    def fill: (untyped) -> untyped
+
+    alias floor view
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def ge: (untyped) -> untyped
+
+    def gt: (untyped) -> untyped
+
+    alias im view
+
+    alias indgen seq
+
+    def inspect: () -> untyped
+
+    def le: (untyped) -> untyped
+
+    def lt: (untyped) -> untyped
+
+    def map: () -> untyped
+
+    def map_with_index: () -> untyped
+
+    def max: (*untyped) -> untyped
+
+    def max_index: (*untyped) -> untyped
+
+    def median: (*untyped) -> untyped
+
+    def min: (*untyped) -> untyped
+
+    def min_index: (*untyped) -> untyped
+
+    def minmax: (*untyped) -> untyped
+
+    def mulsum: (*untyped) -> untyped
+
+    def ne: (untyped) -> untyped
+
+    alias nearly_eq eq
+
+    def poly: (*untyped) -> untyped
+
+    alias pow **
+
+    def prod: (*untyped) -> untyped
+
+    def ptp: (*untyped) -> untyped
+
+    def rand: (*untyped) -> untyped
+
+    def reciprocal: () -> untyped
+
+    alias rint view
+
+    alias round view
+
+    def seq: (*untyped) -> untyped
+
+    def sign: () -> untyped
+
+    def sort: (*untyped) -> untyped
+
+    def sort_index: (*untyped) -> untyped
+
+    def square: () -> untyped
+
+    def store: (untyped) -> untyped
+
+    def sum: (*untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    alias trunc view
+
+    def |: (untyped) -> untyped
+
+    def ~: () -> untyped
+
+    private
+
+    def maximum: (*untyped) -> untyped
+
+    def minimum: (*untyped) -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Integer
+
+    MAX: Integer
+
+    MIN: Integer
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class Int8 < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    def self.maximum: (*untyped) -> untyped
+
+    def self.minimum: (*untyped) -> untyped
+
+    public
+
+    def %: (untyped) -> untyped
+
+    def &: (untyped) -> untyped
+
+    def *: (untyped) -> untyped
+
+    def **: (untyped) -> untyped
+
+    def +: (untyped) -> untyped
+
+    def -: (untyped) -> untyped
+
+    def -@: () -> untyped
+
+    def /: (untyped) -> untyped
+
+    alias < lt
+
+    def <<: (untyped) -> untyped
+
+    alias <= le
+
+    alias > gt
+
+    alias >= ge
+
+    def >>: (untyped) -> untyped
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def ^: (untyped) -> untyped
+
+    def abs: () -> untyped
+
+    def allocate: () -> untyped
+
+    def argmax: (*untyped) -> untyped
+
+    def argmin: (*untyped) -> untyped
+
+    def bincount: (*untyped) -> untyped
+
+    alias ceil view
+
+    def clip: (untyped, untyped) -> untyped
+
+    alias close_to eq
+
+    def coerce_cast: (untyped) -> untyped
+
+    alias conj view
+
+    alias conjugate view
+
+    def cumprod: (*untyped) -> untyped
+
+    def cumsum: (*untyped) -> untyped
+
+    def divmod: (untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def eye: (*untyped) -> untyped
+
+    def fill: (untyped) -> untyped
+
+    alias floor view
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def ge: (untyped) -> untyped
+
+    def gt: (untyped) -> untyped
+
+    alias im view
+
+    alias indgen seq
+
+    def inspect: () -> untyped
+
+    def le: (untyped) -> untyped
+
+    def lt: (untyped) -> untyped
+
+    def map: () -> untyped
+
+    def map_with_index: () -> untyped
+
+    def max: (*untyped) -> untyped
+
+    def max_index: (*untyped) -> untyped
+
+    def median: (*untyped) -> untyped
+
+    def min: (*untyped) -> untyped
+
+    def min_index: (*untyped) -> untyped
+
+    def minmax: (*untyped) -> untyped
+
+    def mulsum: (*untyped) -> untyped
+
+    def ne: (untyped) -> untyped
+
+    alias nearly_eq eq
+
+    def poly: (*untyped) -> untyped
+
+    alias pow **
+
+    def prod: (*untyped) -> untyped
+
+    def ptp: (*untyped) -> untyped
+
+    def rand: (*untyped) -> untyped
+
+    def reciprocal: () -> untyped
+
+    alias rint view
+
+    alias round view
+
+    def seq: (*untyped) -> untyped
+
+    def sign: () -> untyped
+
+    def sort: (*untyped) -> untyped
+
+    def sort_index: (*untyped) -> untyped
+
+    def square: () -> untyped
+
+    def store: (untyped) -> untyped
+
+    def sum: (*untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    alias trunc view
+
+    def |: (untyped) -> untyped
+
+    def ~: () -> untyped
+
+    private
+
+    def maximum: (*untyped) -> untyped
+
+    def minimum: (*untyped) -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Integer
+
+    MAX: Integer
+
+    MIN: Integer
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class Int16 < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    def self.maximum: (*untyped) -> untyped
+
+    def self.minimum: (*untyped) -> untyped
+
+    public
+
+    def %: (untyped) -> untyped
+
+    def &: (untyped) -> untyped
+
+    def *: (untyped) -> untyped
+
+    def **: (untyped) -> untyped
+
+    def +: (untyped) -> untyped
+
+    def -: (untyped) -> untyped
+
+    def -@: () -> untyped
+
+    def /: (untyped) -> untyped
+
+    alias < lt
+
+    def <<: (untyped) -> untyped
+
+    alias <= le
+
+    alias > gt
+
+    alias >= ge
+
+    def >>: (untyped) -> untyped
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def ^: (untyped) -> untyped
+
+    def abs: () -> untyped
+
+    def allocate: () -> untyped
+
+    def argmax: (*untyped) -> untyped
+
+    def argmin: (*untyped) -> untyped
+
+    def bincount: (*untyped) -> untyped
+
+    alias ceil view
+
+    def clip: (untyped, untyped) -> untyped
+
+    alias close_to eq
+
+    def coerce_cast: (untyped) -> untyped
+
+    alias conj view
+
+    alias conjugate view
+
+    def cumprod: (*untyped) -> untyped
+
+    def cumsum: (*untyped) -> untyped
+
+    def divmod: (untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def eye: (*untyped) -> untyped
+
+    def fill: (untyped) -> untyped
+
+    alias floor view
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def ge: (untyped) -> untyped
+
+    def gt: (untyped) -> untyped
+
+    alias im view
+
+    alias indgen seq
+
+    def inspect: () -> untyped
+
+    def le: (untyped) -> untyped
+
+    def lt: (untyped) -> untyped
+
+    def map: () -> untyped
+
+    def map_with_index: () -> untyped
+
+    def max: (*untyped) -> untyped
+
+    def max_index: (*untyped) -> untyped
+
+    def median: (*untyped) -> untyped
+
+    def min: (*untyped) -> untyped
+
+    def min_index: (*untyped) -> untyped
+
+    def minmax: (*untyped) -> untyped
+
+    def mulsum: (*untyped) -> untyped
+
+    def ne: (untyped) -> untyped
+
+    alias nearly_eq eq
+
+    def poly: (*untyped) -> untyped
+
+    alias pow **
+
+    def prod: (*untyped) -> untyped
+
+    def ptp: (*untyped) -> untyped
+
+    def rand: (*untyped) -> untyped
+
+    def reciprocal: () -> untyped
+
+    alias rint view
+
+    alias round view
+
+    def seq: (*untyped) -> untyped
+
+    def sign: () -> untyped
+
+    def sort: (*untyped) -> untyped
+
+    def sort_index: (*untyped) -> untyped
+
+    def square: () -> untyped
+
+    def store: (untyped) -> untyped
+
+    def sum: (*untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    alias trunc view
+
+    def |: (untyped) -> untyped
+
+    def ~: () -> untyped
+
+    private
+
+    def maximum: (*untyped) -> untyped
+
+    def minimum: (*untyped) -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Integer
+
+    MAX: Integer
+
+    MIN: Integer
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class Int32 < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    def self.maximum: (*untyped) -> untyped
+
+    def self.minimum: (*untyped) -> untyped
+
+    public
+
+    def %: (untyped) -> untyped
+
+    def &: (untyped) -> untyped
+
+    def *: (untyped) -> untyped
+
+    def **: (untyped) -> untyped
+
+    def +: (untyped) -> untyped
+
+    def -: (untyped) -> untyped
+
+    def -@: () -> untyped
+
+    def /: (untyped) -> untyped
+
+    alias < lt
+
+    def <<: (untyped) -> untyped
+
+    alias <= le
+
+    alias > gt
+
+    alias >= ge
+
+    def >>: (untyped) -> untyped
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def ^: (untyped) -> untyped
+
+    def abs: () -> untyped
+
+    def allocate: () -> untyped
+
+    def argmax: (*untyped) -> untyped
+
+    def argmin: (*untyped) -> untyped
+
+    def bincount: (*untyped) -> untyped
+
+    alias ceil view
+
+    def clip: (untyped, untyped) -> untyped
+
+    alias close_to eq
+
+    def coerce_cast: (untyped) -> untyped
+
+    alias conj view
+
+    alias conjugate view
+
+    def cumprod: (*untyped) -> untyped
+
+    def cumsum: (*untyped) -> untyped
+
+    def divmod: (untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def eye: (*untyped) -> untyped
+
+    def fill: (untyped) -> untyped
+
+    alias floor view
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def ge: (untyped) -> untyped
+
+    def gt: (untyped) -> untyped
+
+    alias im view
+
+    alias indgen seq
+
+    def inspect: () -> untyped
+
+    def le: (untyped) -> untyped
+
+    def lt: (untyped) -> untyped
+
+    def map: () -> untyped
+
+    def map_with_index: () -> untyped
+
+    def max: (*untyped) -> untyped
+
+    def max_index: (*untyped) -> untyped
+
+    def median: (*untyped) -> untyped
+
+    def min: (*untyped) -> untyped
+
+    def min_index: (*untyped) -> untyped
+
+    def minmax: (*untyped) -> untyped
+
+    def mulsum: (*untyped) -> untyped
+
+    def ne: (untyped) -> untyped
+
+    alias nearly_eq eq
+
+    def poly: (*untyped) -> untyped
+
+    alias pow **
+
+    def prod: (*untyped) -> untyped
+
+    def ptp: (*untyped) -> untyped
+
+    def rand: (*untyped) -> untyped
+
+    def reciprocal: () -> untyped
+
+    alias rint view
+
+    alias round view
+
+    def seq: (*untyped) -> untyped
+
+    def sign: () -> untyped
+
+    def sort: (*untyped) -> untyped
+
+    def sort_index: (*untyped) -> untyped
+
+    def square: () -> untyped
+
+    def store: (untyped) -> untyped
+
+    def sum: (*untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    alias trunc view
+
+    def |: (untyped) -> untyped
+
+    def ~: () -> untyped
+
+    private
+
+    def maximum: (*untyped) -> untyped
+
+    def minimum: (*untyped) -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Integer
+
+    MAX: Integer
+
+    MIN: Integer
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class Int64 < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    def self.maximum: (*untyped) -> untyped
+
+    def self.minimum: (*untyped) -> untyped
+
+    public
+
+    def %: (untyped) -> untyped
+
+    def &: (untyped) -> untyped
+
+    def *: (untyped) -> untyped
+
+    def **: (untyped) -> untyped
+
+    def +: (untyped) -> untyped
+
+    def -: (untyped) -> untyped
+
+    def -@: () -> untyped
+
+    def /: (untyped) -> untyped
+
+    alias < lt
+
+    def <<: (untyped) -> untyped
+
+    alias <= le
+
+    alias > gt
+
+    alias >= ge
+
+    def >>: (untyped) -> untyped
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def ^: (untyped) -> untyped
+
+    def abs: () -> untyped
+
+    def allocate: () -> untyped
+
+    def argmax: (*untyped) -> untyped
+
+    def argmin: (*untyped) -> untyped
+
+    def bincount: (*untyped) -> untyped
+
+    alias ceil view
+
+    def clip: (untyped, untyped) -> untyped
+
+    alias close_to eq
+
+    def coerce_cast: (untyped) -> untyped
+
+    alias conj view
+
+    alias conjugate view
+
+    def cumprod: (*untyped) -> untyped
+
+    def cumsum: (*untyped) -> untyped
+
+    def divmod: (untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def eye: (*untyped) -> untyped
+
+    def fill: (untyped) -> untyped
+
+    alias floor view
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def ge: (untyped) -> untyped
+
+    def gt: (untyped) -> untyped
+
+    alias im view
+
+    alias indgen seq
+
+    def inspect: () -> untyped
+
+    def le: (untyped) -> untyped
+
+    def lt: (untyped) -> untyped
+
+    def map: () -> untyped
+
+    def map_with_index: () -> untyped
+
+    def max: (*untyped) -> untyped
+
+    def max_index: (*untyped) -> untyped
+
+    def median: (*untyped) -> untyped
+
+    def min: (*untyped) -> untyped
+
+    def min_index: (*untyped) -> untyped
+
+    def minmax: (*untyped) -> untyped
+
+    def mulsum: (*untyped) -> untyped
+
+    def ne: (untyped) -> untyped
+
+    alias nearly_eq eq
+
+    def poly: (*untyped) -> untyped
+
+    alias pow **
+
+    def prod: (*untyped) -> untyped
+
+    def ptp: (*untyped) -> untyped
+
+    def rand: (*untyped) -> untyped
+
+    def reciprocal: () -> untyped
+
+    alias rint view
+
+    alias round view
+
+    def seq: (*untyped) -> untyped
+
+    def sign: () -> untyped
+
+    def sort: (*untyped) -> untyped
+
+    def sort_index: (*untyped) -> untyped
+
+    def square: () -> untyped
+
+    def store: (untyped) -> untyped
+
+    def sum: (*untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    alias trunc view
+
+    def |: (untyped) -> untyped
+
+    def ~: () -> untyped
+
+    private
+
+    def maximum: (*untyped) -> untyped
+
+    def minimum: (*untyped) -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Integer
+
+    MAX: Integer
+
+    MIN: Integer
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class SFloat < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    def self.maximum: (*untyped) -> untyped
+
+    def self.minimum: (*untyped) -> untyped
+
+    public
+
+    def %: (untyped) -> untyped
+
+    def *: (untyped) -> untyped
+
+    def **: (untyped) -> untyped
+
+    def +: (untyped) -> untyped
+
+    def -: (untyped) -> untyped
+
+    def -@: () -> untyped
+
+    def /: (untyped) -> untyped
+
+    alias < lt
+
+    alias <= le
+
+    alias > gt
+
+    alias >= ge
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def abs: () -> untyped
+
+    def allocate: () -> untyped
+
+    def argmax: (*untyped) -> untyped
+
+    def argmin: (*untyped) -> untyped
+
+    def ceil: () -> untyped
+
+    def clip: (untyped, untyped) -> untyped
+
+    alias close_to nearly_eq
+
+    def coerce_cast: (untyped) -> untyped
+
+    alias conj view
+
+    alias conjugate view
+
+    def copysign: (untyped) -> untyped
+
+    def cumprod: (*untyped) -> untyped
+
+    def cumsum: (*untyped) -> untyped
+
+    def divmod: (untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def eye: (*untyped) -> untyped
+
+    def fill: (untyped) -> untyped
+
+    def floor: () -> untyped
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def ge: (untyped) -> untyped
+
+    def gt: (untyped) -> untyped
+
+    alias im view
+
+    alias indgen seq
+
+    def inspect: () -> untyped
+
+    def isfinite: () -> untyped
+
+    def isinf: () -> untyped
+
+    def isnan: () -> untyped
+
+    def isneginf: () -> untyped
+
+    def isposinf: () -> untyped
+
+    def le: (untyped) -> untyped
+
+    def logseq: (*untyped) -> untyped
+
+    def lt: (untyped) -> untyped
+
+    def map: () -> untyped
+
+    def map_with_index: () -> untyped
+
+    def max: (*untyped) -> untyped
+
+    def max_index: (*untyped) -> untyped
+
+    def mean: (*untyped) -> untyped
+
+    def median: (*untyped) -> untyped
+
+    def min: (*untyped) -> untyped
+
+    def min_index: (*untyped) -> untyped
+
+    def minmax: (*untyped) -> untyped
+
+    def modf: () -> untyped
+
+    def mulsum: (*untyped) -> untyped
+
+    def ne: (untyped) -> untyped
+
+    def nearly_eq: (untyped) -> untyped
+
+    def poly: (*untyped) -> untyped
+
+    alias pow **
+
+    def prod: (*untyped) -> untyped
+
+    def ptp: (*untyped) -> untyped
+
+    def rand: (*untyped) -> untyped
+
+    def rand_norm: (*untyped) -> untyped
+
+    def reciprocal: () -> untyped
+
+    def rint: () -> untyped
+
+    def rms: (*untyped) -> untyped
+
+    def round: () -> untyped
+
+    def seq: (*untyped) -> untyped
+
+    def sign: () -> untyped
+
+    def signbit: () -> untyped
+
+    def sort: (*untyped) -> untyped
+
+    def sort_index: (*untyped) -> untyped
+
+    def square: () -> untyped
+
+    def stddev: (*untyped) -> untyped
+
+    def store: (untyped) -> untyped
+
+    def sum: (*untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    def trunc: () -> untyped
+
+    def var: (*untyped) -> untyped
+
+    private
+
+    def maximum: (*untyped) -> untyped
+
+    def minimum: (*untyped) -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Integer
+
+    EPSILON: Float
+
+    MAX: Float
+
+    MIN: Float
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class DFloat < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    def self.maximum: (*untyped) -> untyped
+
+    def self.minimum: (*untyped) -> untyped
+
+    public
+
+    def %: (untyped) -> untyped
+
+    def *: (untyped) -> untyped
+
+    def **: (untyped) -> untyped
+
+    def +: (untyped) -> untyped
+
+    def -: (untyped) -> untyped
+
+    def -@: () -> untyped
+
+    def /: (untyped) -> untyped
+
+    alias < lt
+
+    alias <= le
+
+    alias > gt
+
+    alias >= ge
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def abs: () -> untyped
+
+    def allocate: () -> untyped
+
+    def argmax: (*untyped) -> untyped
+
+    def argmin: (*untyped) -> untyped
+
+    def ceil: () -> untyped
+
+    def clip: (untyped, untyped) -> untyped
+
+    alias close_to nearly_eq
+
+    def coerce_cast: (untyped) -> untyped
+
+    alias conj view
+
+    alias conjugate view
+
+    def copysign: (untyped) -> untyped
+
+    def cumprod: (*untyped) -> untyped
+
+    def cumsum: (*untyped) -> untyped
+
+    def divmod: (untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def eye: (*untyped) -> untyped
+
+    def fill: (untyped) -> untyped
+
+    def floor: () -> untyped
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def ge: (untyped) -> untyped
+
+    def gt: (untyped) -> untyped
+
+    alias im view
+
+    alias indgen seq
+
+    def inspect: () -> untyped
+
+    def isfinite: () -> untyped
+
+    def isinf: () -> untyped
+
+    def isnan: () -> untyped
+
+    def isneginf: () -> untyped
+
+    def isposinf: () -> untyped
+
+    def kahan_sum: (*untyped) -> untyped
+
+    def le: (untyped) -> untyped
+
+    def logseq: (*untyped) -> untyped
+
+    def lt: (untyped) -> untyped
+
+    def map: () -> untyped
+
+    def map_with_index: () -> untyped
+
+    def max: (*untyped) -> untyped
+
+    def max_index: (*untyped) -> untyped
+
+    def mean: (*untyped) -> untyped
+
+    def median: (*untyped) -> untyped
+
+    def min: (*untyped) -> untyped
+
+    def min_index: (*untyped) -> untyped
+
+    def minmax: (*untyped) -> untyped
+
+    def modf: () -> untyped
+
+    def mulsum: (*untyped) -> untyped
+
+    def ne: (untyped) -> untyped
+
+    def nearly_eq: (untyped) -> untyped
+
+    def poly: (*untyped) -> untyped
+
+    alias pow **
+
+    def prod: (*untyped) -> untyped
+
+    def ptp: (*untyped) -> untyped
+
+    def rand: (*untyped) -> untyped
+
+    def rand_norm: (*untyped) -> untyped
+
+    def reciprocal: () -> untyped
+
+    def rint: () -> untyped
+
+    def rms: (*untyped) -> untyped
+
+    def round: () -> untyped
+
+    def seq: (*untyped) -> untyped
+
+    def sign: () -> untyped
+
+    def signbit: () -> untyped
+
+    def sort: (*untyped) -> untyped
+
+    def sort_index: (*untyped) -> untyped
+
+    def square: () -> untyped
+
+    def stddev: (*untyped) -> untyped
+
+    def store: (untyped) -> untyped
+
+    def sum: (*untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    def trunc: () -> untyped
+
+    def var: (*untyped) -> untyped
+
+    private
+
+    def maximum: (*untyped) -> untyped
+
+    def minimum: (*untyped) -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Integer
+
+    EPSILON: Float
+
+    MAX: Float
+
+    MIN: Float
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class SComplex < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    public
+
+    def *: (untyped) -> untyped
+
+    def **: (untyped) -> untyped
+
+    def +: (untyped) -> untyped
+
+    def -: (untyped) -> untyped
+
+    def -@: () -> untyped
+
+    def /: (untyped) -> untyped
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def abs: () -> untyped
+
+    def allocate: () -> untyped
+
+    alias angle arg
+
+    def arg: () -> untyped
+
+    def ceil: () -> untyped
+
+    alias close_to nearly_eq
+
+    def coerce_cast: (untyped) -> untyped
+
+    def conj: () -> untyped
+
+    alias conjugate conj
+
+    def copysign: (untyped) -> untyped
+
+    def cumprod: (*untyped) -> untyped
+
+    def cumsum: (*untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def eye: (*untyped) -> untyped
+
+    def fill: (untyped) -> untyped
+
+    def floor: () -> untyped
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def im: () -> untyped
+
+    def imag: () -> untyped
+
+    alias imag= set_imag
+
+    alias indgen seq
+
+    def inspect: () -> untyped
+
+    def isfinite: () -> untyped
+
+    def isinf: () -> untyped
+
+    def isnan: () -> untyped
+
+    def isneginf: () -> untyped
+
+    def isposinf: () -> untyped
+
+    def logseq: (*untyped) -> untyped
+
+    def map: () -> untyped
+
+    def map_with_index: () -> untyped
+
+    def mean: (*untyped) -> untyped
+
+    def mulsum: (*untyped) -> untyped
+
+    def ne: (untyped) -> untyped
+
+    def nearly_eq: (untyped) -> untyped
+
+    def poly: (*untyped) -> untyped
+
+    alias pow **
+
+    def prod: (*untyped) -> untyped
+
+    def rand: (*untyped) -> untyped
+
+    def rand_norm: (*untyped) -> untyped
+
+    def real: () -> untyped
+
+    alias real= set_real
+
+    def reciprocal: () -> untyped
+
+    def rint: () -> untyped
+
+    def rms: (*untyped) -> untyped
+
+    def round: () -> untyped
+
+    def seq: (*untyped) -> untyped
+
+    def set_imag: (untyped) -> untyped
+
+    def set_real: (untyped) -> untyped
+
+    def sign: () -> untyped
+
+    def square: () -> untyped
+
+    def stddev: (*untyped) -> untyped
+
+    def store: (untyped) -> untyped
+
+    def sum: (*untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    def trunc: () -> untyped
+
+    def var: (*untyped) -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Integer
+
+    EPSILON: Float
+
+    MAX: Float
+
+    MIN: Float
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class DComplex < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    public
+
+    def *: (untyped) -> untyped
+
+    def **: (untyped) -> untyped
+
+    def +: (untyped) -> untyped
+
+    def -: (untyped) -> untyped
+
+    def -@: () -> untyped
+
+    def /: (untyped) -> untyped
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def abs: () -> untyped
+
+    def allocate: () -> untyped
+
+    alias angle arg
+
+    def arg: () -> untyped
+
+    def ceil: () -> untyped
+
+    alias close_to nearly_eq
+
+    def coerce_cast: (untyped) -> untyped
+
+    def conj: () -> untyped
+
+    alias conjugate conj
+
+    def copysign: (untyped) -> untyped
+
+    def cumprod: (*untyped) -> untyped
+
+    def cumsum: (*untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def eye: (*untyped) -> untyped
+
+    def fill: (untyped) -> untyped
+
+    def floor: () -> untyped
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def im: () -> untyped
+
+    def imag: () -> untyped
+
+    alias imag= set_imag
+
+    alias indgen seq
+
+    def inspect: () -> untyped
+
+    def isfinite: () -> untyped
+
+    def isinf: () -> untyped
+
+    def isnan: () -> untyped
+
+    def isneginf: () -> untyped
+
+    def isposinf: () -> untyped
+
+    def kahan_sum: (*untyped) -> untyped
+
+    def logseq: (*untyped) -> untyped
+
+    def map: () -> untyped
+
+    def map_with_index: () -> untyped
+
+    def mean: (*untyped) -> untyped
+
+    def mulsum: (*untyped) -> untyped
+
+    def ne: (untyped) -> untyped
+
+    def nearly_eq: (untyped) -> untyped
+
+    def poly: (*untyped) -> untyped
+
+    alias pow **
+
+    def prod: (*untyped) -> untyped
+
+    def rand: (*untyped) -> untyped
+
+    def rand_norm: (*untyped) -> untyped
+
+    def real: () -> untyped
+
+    alias real= set_real
+
+    def reciprocal: () -> untyped
+
+    def rint: () -> untyped
+
+    def rms: (*untyped) -> untyped
+
+    def round: () -> untyped
+
+    def seq: (*untyped) -> untyped
+
+    def set_imag: (untyped) -> untyped
+
+    def set_real: (untyped) -> untyped
+
+    def sign: () -> untyped
+
+    def square: () -> untyped
+
+    def stddev: (*untyped) -> untyped
+
+    def store: (untyped) -> untyped
+
+    def sum: (*untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    def trunc: () -> untyped
+
+    def var: (*untyped) -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Integer
+
+    EPSILON: Float
+
+    MAX: Float
+
+    MIN: Float
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class RObject < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    def self.maximum: (*untyped) -> untyped
+
+    def self.minimum: (*untyped) -> untyped
+
+    public
+
+    def %: (untyped) -> untyped
+
+    def &: (untyped) -> untyped
+
+    def *: (untyped) -> untyped
+
+    def **: (untyped) -> untyped
+
+    def +: (untyped) -> untyped
+
+    def -: (untyped) -> untyped
+
+    def -@: () -> untyped
+
+    def /: (untyped) -> untyped
+
+    alias < lt
+
+    def <<: (untyped) -> untyped
+
+    alias <= le
+
+    alias > gt
+
+    alias >= ge
+
+    def >>: (untyped) -> untyped
+
+    def []: (*untyped) -> untyped
+
+    def []=: (*untyped) -> untyped
+
+    def ^: (untyped) -> untyped
+
+    def abs: () -> untyped
+
+    def allocate: () -> untyped
+
+    def argmax: (*untyped) -> untyped
+
+    def argmin: (*untyped) -> untyped
+
+    def ceil: () -> untyped
+
+    def clip: (untyped, untyped) -> untyped
+
+    alias close_to nearly_eq
+
+    def coerce_cast: (untyped) -> untyped
+
+    alias conj view
+
+    alias conjugate view
+
+    def cumprod: (*untyped) -> untyped
+
+    def cumsum: (*untyped) -> untyped
+
+    def divmod: (untyped) -> untyped
+
+    def each: () -> untyped
+
+    def each_with_index: () -> untyped
+
+    def eq: (untyped) -> untyped
+
+    def extract: () -> untyped
+
+    def eye: (*untyped) -> untyped
+
+    def fill: (untyped) -> untyped
+
+    def floor: () -> untyped
+
+    def format: (*untyped) -> untyped
+
+    def format_to_a: (*untyped) -> untyped
+
+    def ge: (untyped) -> untyped
+
+    def gt: (untyped) -> untyped
+
+    alias im view
+
+    alias indgen seq
+
+    def inspect: () -> untyped
+
+    def isfinite: () -> untyped
+
+    def isinf: () -> untyped
+
+    def isnan: () -> untyped
+
+    def isneginf: () -> untyped
+
+    def isposinf: () -> untyped
+
+    def le: (untyped) -> untyped
+
+    def logseq: (*untyped) -> untyped
+
+    def lt: (untyped) -> untyped
+
+    def map: () -> untyped
+
+    def map_with_index: () -> untyped
+
+    def max: (*untyped) -> untyped
+
+    def max_index: (*untyped) -> untyped
+
+    def mean: (*untyped) -> untyped
+
+    def min: (*untyped) -> untyped
+
+    def min_index: (*untyped) -> untyped
+
+    def minmax: (*untyped) -> untyped
+
+    def mulsum: (*untyped) -> untyped
+
+    def ne: (untyped) -> untyped
+
+    def nearly_eq: (untyped) -> untyped
+
+    def poly: (*untyped) -> untyped
+
+    alias pow **
+
+    def prod: (*untyped) -> untyped
+
+    def ptp: (*untyped) -> untyped
+
+    def rand: (*untyped) -> untyped
+
+    def reciprocal: () -> untyped
+
+    def rms: (*untyped) -> untyped
+
+    def round: () -> untyped
+
+    def seq: (*untyped) -> untyped
+
+    def sign: () -> untyped
+
+    def square: () -> untyped
+
+    def stddev: (*untyped) -> untyped
+
+    def store: (untyped) -> untyped
+
+    def sum: (*untyped) -> untyped
+
+    def to_a: () -> untyped
+
+    def trunc: () -> untyped
+
+    def var: (*untyped) -> untyped
+
+    def |: (untyped) -> untyped
+
+    def ~: () -> untyped
+
+    private
+
+    def maximum: (*untyped) -> untyped
+
+    def minimum: (*untyped) -> untyped
+
+    CONTIGUOUS_STRIDE: Integer
+
+    ELEMENT_BIT_SIZE: Integer
+
+    ELEMENT_BYTE_SIZE: Integer
+
+    UPCAST: Hash[untyped, untyped]
+  end
+
+  class Struct < Numo::NArray
+    def self.[]: (*untyped) -> untyped
+
+    def self.add_type: (*untyped) -> untyped
+
+    def self.cast: (untyped) -> untyped
+
+    alias self.complex128 self.dcomplex
+
+    alias self.complex64 self.scomplex
+
+    def self.dcomplex: (*untyped) -> untyped
+
+    def self.dfloat: (*untyped) -> untyped
+
+    alias self.float32 self.sfloat
+
+    alias self.float64 self.dfloat
+
+    def self.int16: (*untyped) -> untyped
+
+    def self.int32: (*untyped) -> untyped
+
+    def self.int64: (*untyped) -> untyped
+
+    def self.int8: (*untyped) -> untyped
+
+    def self.new: (*untyped) -> untyped
+
+    def self.scomplex: (*untyped) -> untyped
+
+    def self.sfloat: (*untyped) -> untyped
+
+    def self.uint16: (*untyped) -> untyped
+
+    def self.uint32: (*untyped) -> untyped
+
+    def self.uint64: (*untyped) -> untyped
+
+    def self.uint8: (*untyped) -> untyped
+
+    public
+
+    def definition: (untyped) -> untyped
+
+    def definitions: () -> untyped
+
+    def extract: () -> untyped
+
+    def field: (untyped) -> untyped
+
+    def field_set: (untyped, untyped) -> untyped
+
+    def inspect: () -> untyped
+
+    def method_missing: (*untyped) -> untyped
+
+    def store: (untyped) -> untyped
+
+    def to_a: () -> untyped
+  end
+
+  module NMath
+    def self.method_missing: (*untyped) -> untyped
+
+    DISPATCH: Hash[untyped, untyped]
+  end
+
+end

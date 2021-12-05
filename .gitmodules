@@ -58,3 +58,6 @@
 [submodule "gems/zengin_code/1.0/_src"]
 	path = gems/zengin_code/1.0/_src
 	url = https://github.com/zengin-code/zengin-rb.git
+[submodule "gems/numo-narray/0.9/_src"]
+	path = gems/numo-narray/0.9/_src
+	url = https://github.com/ruby-numo/numo-narray.git
